@@ -1,0 +1,7 @@
+{
+  "name": "樂學中文：四年級互動課堂",
+  "description": "An interactive Chinese learning app for Grade 4 students, covering tea houses, shopping malls, nature farms, and a crazy mix challenge with Gemini-powered AI feedback.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
