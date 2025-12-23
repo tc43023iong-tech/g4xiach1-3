@@ -16,21 +16,22 @@
         }
         @keyframes floating {
             0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-10px) rotate(5deg); }
+            50% { transform: translateY(-15px) rotate(3deg); }
             100% { transform: translateY(0px) rotate(0deg); }
         }
         @keyframes wiggle {
-            0%, 100% { transform: rotate(-3deg); }
-            50% { transform: rotate(3deg); }
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
         }
-        @keyframes pop {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+        @keyframes popIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            70% { transform: scale(1.1); opacity: 1; }
             100% { transform: scale(1); }
         }
-        .floating { animation: floating 3s ease-in-out infinite; }
-        .wiggle:hover { animation: wiggle 0.3s ease-in-out infinite; }
-        .pop-active:active { animation: pop 0.2s ease-out forwards; }
+        .floating { animation: floating 4s ease-in-out infinite; }
+        .floating-slow { animation: floating 6s ease-in-out infinite; }
+        .wiggle:hover { animation: wiggle 0.4s ease-in-out infinite; }
+        .animate-popIn { animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
         .animate-fadeIn { animation: fadeIn 0.6s ease-out forwards; }
         .animate-bounceIn { animation: bounceIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
         
@@ -49,6 +50,10 @@
         ::-webkit-scrollbar { width: 12px; }
         ::-webkit-scrollbar-track { background: #fff1f2; }
         ::-webkit-scrollbar-thumb { background: #fda4af; border-radius: 10px; border: 3px solid #fff1f2; }
+        
+        .sticker-shadow {
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+        }
     </style>
 <script type="importmap">
 {
@@ -63,5 +68,6 @@
 </head>
 <body>
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
 </body>
 </html>
